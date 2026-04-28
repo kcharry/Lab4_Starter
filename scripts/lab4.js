@@ -26,13 +26,9 @@ function sumValues(num1, num2, add) {
  */
 function discountPrices(prices, discount) {
     const discounted = []
-    
     const length = prices.length;
-    if (length == 0){
-        return false;
-    }
-
     let discountedPrice = 0
+
     for(let i = 0; i < length; i++) {
         discountedPrice = prices[i] * (1 - discount);
         discounted.push(discountedPrice);
@@ -42,8 +38,3 @@ function discountPrices(prices, discount) {
 }
 
 module.exports = {sumValues, discountPrices};
-
-console.log(sumValues(2, 3, true));
-console.log(sumValues(2, 3, false));
-console.log(discountPrices([100, 200, 300], 0.5));
-console.log(discountPrices([], 0.5));
